@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+      <!-- ESTA SECCION DEBE COPIARSE COMPLETAMENTE (1)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMS | Comprar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/estilo-body.css">
+    <link rel="stylesheet" href="/css/estilo-header.css">
+    <link rel="stylesheet" href="/css/estilo-nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx48.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx64.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx128.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx144.png">
+    <link rel="stylesheet" href="/css/estilos-comprar.css">
+
+</head>
+    <!-- ESTA SECCION DEBE COPIARSE COMPLETAMENTE (1)-->
+
+
+<body>
+    <!-- ESTA SECCION DEBE COPIARSE COMPLETAMENTE (2)-->
+    <header>
+        <div>
+            <img src="/images/header/Logo-encabezado.png" alt="Logo de RMS">
+            <h1>¡ Jugando juntos, ganando siempre !</h1>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="nav-contenedor">
+            <label for="menu" class="nav-label">
+                <img class="nav-img" src="/images/nav/menu2.png" alt="Menu-RMS">
+            </label>
+            <input class="nav-input" type="checkbox" id="menu">
+            <div class="nav-menu">
+                <a class="nav-items" href="/html/comprar.html"><h3 class="item-comprar">Comprar</h3></a>
+                <a class="nav-items" href="/index.html">Inicio</a>
+                <a class="nav-items" href="/html/historial.html">Historial</a>
+                <a class="nav-items" href="/html/preguntas.html">Preguntas</a>
+                <a class="nav-items" href="/html/metodo.html">Método</a>
+                <a class="nav-items" href="/html/contacto.html">Pagar Boletos</a>
+                <a class="nav-items" href="/html/verificador.html">Verificador</a>
+            </div>
+        </div>
+
+    </nav>
+    <!-- ESTA SECCION DEBE COPIARSE COMPLETAMENTE (2)-->
+
+    <main class="inicial">
+        <div class="titulo-inicial">
+            <h1>PARTICIPA PARA PODER GANAR:</h1>
+            <h2>Iphone 15 Pro Max o su equivalente en efectivo</h2>
+            <p>Que la suerte te abrace hoy, mañana y siempre, iluminando tu camino con alegría y éxito.</p>
+            <p>A celebrar el 24 de diciembre.</p>
+
+        </div>
+
+        <img src="/images/index/Iphone-15.jpg" alt="Iphone 15">
+    </main>
+
+    <section class="contenedor-info">
+        <h4>¡No pierdas ni un segundo! ¡aprovecha este tiempo antes de que vuelvan a brillar en la vitrina para todos! </h4>
+    </section>
+
+    <section class="costo-boletos">
+        <h4>En esta rifa el costo de boletos es el siguiente: </h4>
+        <h5>Cada boleto en $10 pesos mexicanos</h5>
+    </section>
+
+    <section class="titulo-lista">
+        <h2>A continuación se muestra la lista de boletos:</h2>
+    </section>
+
+    <section class="btn-recarga">
+        <button id="refreshButton">Actualizar lista de boletos</button>
+    </section>
+
+    <section class="contenedor-boletos">
+        <div>
+            <input class="refresh-trigger" type="number" id="numero" name="numero" placeholder="Busca tu boleto" required >        
+        </div>
+    </section>
+
+    <section class="maquinita-boletos">
+        <div class="boletos">
+            <button class="boton-estilizado toggle-menu" id="botonSuerte">Boletos a la suerte</button>
+            <div class="menu-cantidad">
+                <ul>
+                    <li data-cantidad="5">5 boletos</li>
+                    <li data-cantidad="10">10 boletos</li>
+                    <li data-cantidad="15">15 boletos</li>
+                    <li data-cantidad="20">20 boletos</li>
+                    <li data-cantidad="30">30 boletos</li>
+                    <li data-cantidad="50">50 boletos</li>
+                    <li data-cantidad="100">100 boletos</li>
+                </ul>
+            </div>        
+        </div>
+    </section>
+
+    <section class="boletos-buscados">
+        <div class="lista-de-boletos-buscados">
+            <!-- Aquí se mostrarán los boletos buscados -->
+        </div>
+    </section>
+    
+    <section class="boletos-seleccionados">
+        <h3>BOLETOS A COMPRAR:</h3>
+        <div class="contener-daotos">
+            <label for="nombre">RMS</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        
+            <label for="apellido">te desea</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+        
+            <label for="telefono">mucho</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Telefóno" required>
+
+            <label for="estado">éxito</label>
+            <select id="estado" name="estado" required>
+                <option value="" disabled selected>Estado</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Ciudad de México">Ciudad de México</option>
+                <option value="Durango">Durango</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="México">México</option>
+                <option value="Michoacán">Michoacán</option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+            </select>
+        </div>
+        <button id="botonComprar">¡COMPRAR YA!</button>
+        <div class="lista-de-boletos-seleccionados">
+            <!-- Aquí se mostrarán los boletos seleccionados -->
+        </div>
+    </section>
+
+    <div class="encabezado-boletos">
+        <h3>Lista de boletos disponibles</h3>
+    </div>
+
+    <section class="lista-boletos">
+        <div id="lista-de-boletos">
+            <!-- Aquí se mostrarán los botones generados dinámicamente -->
+        </div>
+    </section>
+
+    <section class="deseos">
+        <div>
+            <h3>¡El equipo de Rifas Master Squad te desea mucha suerte!</h3>
+            <h4>Para dudas o aclaraciones dirigete a la sección de <a href="/html/preguntas.html">Preguntas</a>, <a href="/html/metodo.html"> Método </a>o<a href="/index.html"> Inicio</a></h4>
+        </div>
+    </section>
+    
+    <script src="/js/control-cache.js"></script>
+    <script src="/js/codigo-general1.js"></script>
+    <script src="/js/mensaje-whatsapp.js"></script>
+    <script src="/js/menu-boletos-a-la-suerte.js"></script>
+
+
+</body>
+</html>

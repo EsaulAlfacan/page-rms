@@ -1,0 +1,452 @@
+/*RESETEO DE LOS PARGENES INTERIORES Y EXTERIORES*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*ATRIBUTOS GENERALES PREESTABLECIDOS*/
+:root{
+    --color-rojo: #f20519 ;
+    --color-naranja: #f25c05 ;
+    --color-amarillo-obscuro: #f2ab27 ;
+    --color-amarillo-claro: #f2cb05 ;
+    --color-blanco: #d2d2d2 ;
+    --color-negro: #020202 ;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto';
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;;
+}
+
+/*------------------------------------------------------------------------------------------*/
+/*INICIAN LOS ESTILOS DE ESTA SECCION*/
+
+/*ESTILOS CORRESPÓNDIENTES A RIFA*/
+main{
+    z-index: -1;
+}
+
+.main-contenedor{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.rifa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.rifa-contenedor{
+    position: relative;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 25px 80px var(--color-amarillo-obscuro);
+    cursor: pointer;
+}
+
+.rifa-contenedor img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.rifa-contenedor .rifa-contenedor-capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 237, 21, 0.384);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.rifa-contenedor:hover >.rifa-contenedor-capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.rifa-contenedor:hover >.rifa-contenedor-capa h2{
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.rifa-contenedor-capa h2{
+    color: var(--color-blanco);
+    font-weight: 400px;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.rifa-contenedor-capa p{
+    color: var(--color-blanco);
+    font-size: 18px;
+    line-height: 1.5;
+    margin: auto;
+    max-width: 220px;
+    width: 100%;
+}
+
+.rifa-contenedor:hover >img{
+    transform: scale(1.3);
+}
+
+.nav-label img{
+    height: 45px;
+}
+
+/*ESTILOS CORRESPÓNDIENTES A CONTENEDOR-BOTON*/
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--color-blanco);
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    background-color: var(--color-negro);
+    border-radius: 10px;
+}
+
+.btn-neon:hover{
+    background-color: var(--color-amarillo-obscuro);
+    color: var(--color-negro);
+    box-shadow: 0 0 10px #f25c05, 0 0 40px #f25c05, 0 0 80px #f25c05;
+    transition-delay: 1.3s;
+}
+
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(90deg, transparent, #f25c05);
+}
+
+.btn-neon:hover #span1{
+    left: 100%;
+    transition: .5s;
+}
+
+#span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(270deg, transparent, #f25c05);
+}
+
+.btn-neon:hover #span3{
+    right: 100%;
+    transition: .5s;
+    transition-delay: 0.5s;
+}
+
+#span2{
+    top: -100%;
+    right: 0;
+    width: 15px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f25c05);
+}
+
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: .5s;
+    transition-delay: 0.25s;
+
+}
+
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #f25c05);
+}
+
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: .5s;
+    transition-delay: 1s;
+
+}
+
+/*ESTILOS CORRESPÓNDIENTES A ADVERTENCIA*/
+.advertencia{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.advertencia-contenedor{
+    width: 100%;
+    height: 500px;
+}
+
+.advertencia-titulo{
+    background-color: var(--color-amarillo-obscuro);
+    height: 60px;
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.advertencia-contenedor h3{
+    background-color: var(--color-amarillo-claro);
+    height: auto;
+    font-size: 30px;
+}
+
+.advertencia-contenedor p{
+    font-size: 20px;
+    padding: 15px 80px;
+}
+
+.advertencia img{
+    height: 250px;
+    border-radius: 20px;
+}
+
+/*ESTILOS CORRESPÓNDIENTES A CONFIANZA*/
+.confianza-contenedor h2{
+    margin-top: 45px;
+    width: 100%;
+    background-color: green;
+    height: auto;
+    font-size: 40px;
+}
+
+.confianza-contenedor h3{
+    font-size: 30px;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    height: auto;
+}
+
+.facebook{
+    height: 150px;
+}
+
+.whatsapp{
+    height: 150px;
+    border-radius: 10px;
+}
+
+.confianza-contenedor h4{
+    background-color: green;
+    height: auto;
+    font-size: 20px;
+}
+
+/*INICIO DE LAS MEDIA QUERYS*/
+
+/*MEDIA QUERY PARA UN WITDH MÁZIMO DE 550PX*/
+@media(max-width: 550px){
+    .confianza-contenedor h2{
+        margin-top: 70px;
+    }
+
+}
+
+/*MEDIA QUERY PARA UN WITDH MÁZIMO DE 500PX*/
+@media(max-width: 550px){
+    .confianza-contenedor h2{
+        margin-top: 70px;
+    }
+
+    .advertencia-contenedor p{
+        padding: 20px;
+    }
+
+    .advertencia-contenedor img{
+        height: 200px;
+    }
+
+}
+
+/*MEDIA QUERY PARA UN WITDH MÁZIMO DE 400PX*/
+@media(max-width: 400px){
+    .confianza-contenedor h2{
+        margin-top: 70px;
+    }
+
+    .advertencia-contenedor p{
+        padding: 20px;
+    }
+
+    .advertencia-contenedor img{
+        height: 170px;
+    }
+
+    .confianza-contenedor h2{
+        font-size: 30px;
+    }
+
+    .confianza-contenedor h3{
+        font-size: 20px;
+    }
+
+}
+
+/*MEDIA QUERY PARA UN WITDH MÁZIMO DE 350px*/
+@media(max-width: 350px){
+    .confianza-contenedor h2{
+        margin-top: 10px;
+    }
+
+    .advertencia-titulo{
+        font-size: 40px;
+        padding: 5px
+    }
+
+    .advertencia-contenedor h3
+    {
+        font-size: 25px;
+    }
+
+    .advertencia-contenedor p{
+        padding: 20px;
+        font-size: 17px;
+    }
+
+    .advertencia-contenedor img{
+        height: 150px;
+    }
+
+    .confianza-contenedor h2{
+        font-size: 20px;
+    }
+
+    .confianza-contenedor h3{
+        font-size: 15px;
+    }
+
+}
+
+/*MEDIA QUERY PARA UN WITDH MÁZIMO DE 300px*/
+@media(max-width: 300px){
+    .confianza-contenedor h2{
+        margin-top: 40px;
+    }
+
+    .advertencia-titulo{
+        font-size: 40px;
+        padding: 5px
+    }
+
+    .advertencia-contenedor h3
+    {
+        font-size: 25px;
+    }
+
+    .advertencia-contenedor p{
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .advertencia-contenedor img{
+        height: 130px;
+    }
+
+    .confianza-contenedor h2{
+        font-size: 15px;
+    }
+
+    .confianza-contenedor h3{
+        font-size: 15px;
+    }
+
+    .facebook{
+        height: 100px;
+    }
+
+    .whatsapp{
+        height: 100px;
+    }
+
+    .confianza-contenedor h4{
+        font-size: 15px;
+    }
+}
+
+/*MEDIA QUERY PARA UN WITDH MÁZIMO DE 260px*/
+@media(max-width: 260px){
+    .confianza-contenedor h2{
+        margin-top: 10px;
+    }
+
+    .advertencia{
+        height: 420px;
+    }
+
+    .advertencia-titulo{
+        font-size: 35px;
+        padding: 5px
+    }
+
+    .advertencia-contenedor h3
+    {
+        font-size: 20px;
+    }
+
+    .advertencia-contenedor p{
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .advertencia-contenedor img{
+        height: 130px;
+    }
+
+    .confianza-contenedor h2{
+        font-size: 15px;
+    }
+
+    .confianza-contenedor h3{
+        font-size: 15px;
+    }
+
+    .facebook{
+        height: 100px;
+    }
+
+    .whatsapp{
+        height: 100px;
+    }
+
+    .confianza-contenedor h4{
+        font-size: 15px;
+    }
+}

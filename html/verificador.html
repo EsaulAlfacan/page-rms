@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+       <!-- ESTA SECCION DEBE COPIARSE COMPLETAMENTE (1)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/estilo-body.css">
+    <link rel="stylesheet" href="/css/estilo-header.css">
+    <link rel="stylesheet" href="/css/estilo-nav.css">
+    <link rel="stylesheet" href="/css/estilos-verificador.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx48.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx64.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx128.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/rmsx144.png">
+</head>
+    <!-- ESTA SECCION DEBE COPIARSE COMPLETAMENTE (1)-->
+
+  <body>
+    <!-- ESTA SECCION DEBE COPIARSE COMPLETAMENTE (2)-->
+    <header>
+        <div>
+            <img src="/images/header/Logo-encabezado.png" alt="Logo de RMS">
+            <h1>¡ Jugando juntos, ganando siempre !</h1>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="nav-contenedor">
+            <label for="menu" class="nav-label">
+                <img class="nav-img" src="/images/nav/menu2.png" alt="Menu-RMS">
+            </label>
+            <input class="nav-input" type="checkbox" id="menu">
+            <div class="nav-menu">
+                <a class="nav-items" href="/html/comprar.html"><h3 class="item-comprar">Comprar</h3></a>
+                <a class="nav-items" href="/index.html">Inicio</a>
+                <a class="nav-items" href="/html/historial.html">Historial</a>
+                <a class="nav-items" href="/html/preguntas.html">Preguntas</a>
+                <a class="nav-items" href="/html/metodo.html">Método</a>
+                <a class="nav-items" href="/html/contacto.html">Pagar boletos</a>
+                <a class="nav-items" href="/html/verificador.html">Verificador</a>
+            </div>
+        </div>
+
+    </nav>
+    <!-- ESTA SECCION DEBE COPIARSE COMPLETAMENTE (2)-->
+
+    <section class="btn-recarga">
+      <button id="refreshButton">Actualizar base de datos</button>
+  </section>
+
+    <section class="buscador-info">
+        <input type="text" id="campoBusqueda" placeholder="Ingresa tu búsqueda">
+        <button class="btn-buscador" id="btnBuscar">BUSCAR</button>
+        <div class="informacion-obtenida">
+          <!-- Información obtenida de la búsqueda -->
+        </div>
+    </section>
+    
+      
+
+
+    <section class="tabla-boletos">
+        <h2>Lista de información</h2>
+        <table>
+          <thead>            <!-- ENCABEZADO DE LA TABLA (3)-->
+
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Boletos</th>
+              <th>Estado</th>
+              <th>Pagado</th>
+            </tr>
+            
+          </thead>            <!-- ENCABEZADO DE LA TABLA (3)-->
+
+    
+        <!--INICIAN DATOS DE LA TABLA-->
+          <tbody>
+            <tr><td>"Emmanuel"</td><td>"Ruiz"</td><td>"Hidalgo"</td><td>"1017, 1127, 1542, 3948, 9874"</td><td>SI</td>
+
+        <!--TERMINAN DATOS DE LA TABLA-->
+
+                <!-- PLANTILLA VACIA (4)
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+                
+              PLANTILLA VACIA (4)-->
+
+            
+
+
+          </tbody>
+        </table>
+      </section>
+      
+      <script>
+      document.getElementById("refreshButton").addEventListener("click", function() {
+        location.reload(true);
+      });
+      </script>
+      <script src="/js/informacion-verificador.js"></script>
+    
+  </body>
+</html>
